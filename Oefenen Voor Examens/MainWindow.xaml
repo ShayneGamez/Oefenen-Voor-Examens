@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oefenen_Voor_Examens"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+                Title="Ontbijt" Height="226" Width="452" Loaded="Window_Loaded">
     <Grid>
-
+        <GroupBox Header="Kies je ontbijt" HorizontalAlignment="Left" Width="182" Height="148" VerticalAlignment="Top" Margin="10,10,0,0">
+            <Grid>
+                <Button x:Name="btnEatToast" Content="Toast" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Height="27" Width="150" Click="btnEatToast_Click" />
+                <Button x:Name="btnEatCroissant" Content="Croissant" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="27" Width="150" Click="BtnEatCroissant_Click" />
+                <Button x:Name="btnEatEgg" Content="Eitje" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Height="27" Width="150" Click="btnEatEgg_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Ontbijttafel" HorizontalAlignment="Left" Width="221" Height="148" VerticalAlignment="Top" Margin="197,10,0,0">
+            <Grid>
+                <Label Content="Resterende croissants" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="148" Height="27"/>
+                <Label Content="Resterende toastbroodjes" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="148" Height="27"/>
+                <Label Content="Resterende eieren" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="148" Height="27"/>
+                <Label x:Name="lblCroissants" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="163,15,0,0" VerticalAlignment="Top" Width="36" Height="27" FontWeight="Bold"/>
+                <Label x:Name="lblToasts" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="163,47,0,0" VerticalAlignment="Top" Width="36" Height="27" FontWeight="Bold"/>
+                <Label x:Name="lblEggs" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="163,79,0,0" VerticalAlignment="Top" Width="36" Height="27" FontWeight="Bold"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
