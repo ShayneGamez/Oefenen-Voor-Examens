@@ -22,8 +22,8 @@ namespace Oefenen_Voor_Examens
         int croissants = 5;           //stores the number of croissants left on table
         int eggs = 2;               //stores the number of eggs left on table
 
-        int burntToasts = 0;
-        int edibleToasts = 0;
+        int burntToasts = 0;       // stores the number of burnt toasts
+        int edibleToasts = 0;      // stores the number of edible toasts
 
 
         public MainWindow()
@@ -49,7 +49,7 @@ namespace Oefenen_Voor_Examens
             toasts--;
             lblToasts.Content = toasts;
 
-            bool isBurnt = random.Next(2) == 1; // 50% kans
+            bool isBurnt = random.Next(2) == 1; // 50% chance for your toast to be burnt
 
             if (isBurnt)
             {
@@ -61,9 +61,9 @@ namespace Oefenen_Voor_Examens
                 edibleToasts++;
             }
 
-            if (toasts == 0)
+            if (toasts == 0)     
             {
-                btnEatToast.IsEnabled = false;
+                btnEatToast.IsEnabled = false;     //disable button if there are no toasts left
 
                 MessageBox.Show(
                     $"Al je toasts zijn op!\n\n" +
